@@ -1,13 +1,13 @@
 # Microsoft-AI-ML-Engineer-Certification
 
-Preparing a model for deployment
+<h1> Preparing a model for deployment </h1>
 
-Introduction
+<h2> Introduction </h2>
 In this activity, you will apply the skills and knowledge you’ve gained to prepare an ML model for deployment. This exercise will give you hands-on experience with the steps involved in packaging, containerizing, and deploying a model in a production environment. 
 
 Take a trained model, prepare it for deployment, and ensure it’s ready to serve predictions in a real-world setting.
 
-Objective
+<h2>Objective</h2>
 Package an ML model along with its dependencies.
 
 Containerize the model using Docker.
@@ -16,7 +16,7 @@ Deploy the model locally, and test its performance.
 
 Optionally, deploy the model to a cloud environment for wider accessibility.
 
-Prerequisites
+<h2>Prerequisites</h2>
 Before starting the activity, ensure you have the following tools installed on your machine:
 
 Python 3.6 or later: for running scripts and packaging the model
@@ -27,11 +27,10 @@ Git: (optional) for version control
 
 An IDE: such as VS Code, PyCharm, or Jupyter Notebook
 
-1. Packaging the model
-========================
+<h1> Packaging the model </h1>
 
-Step 1: Save the trained model 
--------------------------------
+Step 1: Save the trained model
+------------------------------
 1. Train a simple model 
 
 If you don’t have a trained model, you can use the following example to train a simple logistic regression model on the Iris dataset:
@@ -64,8 +63,7 @@ Run the script using python serve_model.py, and use tools such as Postman or cUR
     “Input” : [5.1, 3.5, 1.4, 0.2]
 }
 
-2. Containerizing the model with Docker
-========================================
+<h1>2. Containerizing the model with Docker</h1>
 
 Step 1: Create a Dockerfile
 ---------------------------
@@ -101,8 +99,7 @@ docker run -d -p 80:80 iris_model_image
 Test the deployed model by sending a POST request to http://localhost:80/predict using the same JSON payload you used earlier.
 
 
-3. Optional: Deploying to a cloud environment
-=============================================
+<h1>3. Optional: Deploying to a cloud environment</h1>
 If you want to deploy your Docker container to a cloud environment (such as Microsoft Azure, Amazon Web Services, or Google Cloud), follow the platform-specific instructions for deploying Docker containers. Here’s a brief overview for deploying to Azure:
 
 Step-by-step guide:
@@ -135,6 +132,5 @@ az container create --resource-group myResourceGroup --name irisModelContainer -
 
 Once deployed, you can test the model using the public IP address or DNS label provided by Azure.
 
-4. Deliverables
-================
+<h1>4. Deliverables</h1>
 Upon completing this activity, you should have your packaged model, Dockerfile, and any scripts you used. If you deployed the model to the cloud, provide the URL to access it.
